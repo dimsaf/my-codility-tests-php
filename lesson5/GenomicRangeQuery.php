@@ -1,4 +1,11 @@
 <?php
+/**
+ * 
+ * this solution get 100% on Codility.com!
+ * 
+ * @author saf
+ *
+ */
 
 function solution($S, $P, $Q){
     $A = $C = $G = $T = 0;
@@ -28,7 +35,7 @@ function solution($S, $P, $Q){
         }
         $quantaties[$i]=$A."|".$C."|".$G."|".$T; 
     } 
-    print_r($quantaties);
+//    print_r($quantaties);
     $right=$left=array();
     for ($i = 0; $i < count($P); $i++) {
         $right=explode("|", $quantaties[$Q[$i]]); print_r($right);
@@ -41,6 +48,6 @@ function solution($S, $P, $Q){
     return $results;
 }
 
-print_r(solution('GGGGAGGGAGGGG', [3,5,0], [4,5,6]));
+print_r(solution('CAGCCTA', [2,5,0], [4,5,6]));
 
 ?>
